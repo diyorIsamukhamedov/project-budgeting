@@ -1,0 +1,11 @@
+﻿employee_id,first_name,last_name,email,job_title,salary,hire_date,department_id
+1001,Liam,Brown,john.doe@example.com,Software Engineer,85000,2018-05-12,1
+1002,Emma,Taylor,jane.smith@example.com,Marketing Manager,78000,2020-03-10,2
+1003,Michael,Johnson,michael.johnson@example.com,Data Scientist,95000,2016-09-01,3
+1004,Emily,Brown,emily.brown@example.com,HR Manager,70000,2019-07-15,4
+1005,Robert,Williams,robert.williams@example.com,Sales Executive,72000,2017-11-20,3
+1006,Linda,Miller,linda.miller@example.com,Operations Manager,80000,2015-01-05,2
+1007,William,Jones,william.jones@example.com,Business Analyst,75000,2021-06-22,1
+1008,Sophia,Davis,sophia.davis@example.com,Product Manager,90000,2018-12-08,4
+1009,David,Martinez,david.martinez@example.com,IT Specialist,68000,2019-10-29,5
+1010,Olivia,Wilson,olivia.wilson@example.com,Finance Analyst,83000,2016-04-18,5
