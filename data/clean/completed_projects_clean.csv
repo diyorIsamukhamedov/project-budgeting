@@ -1,0 +1,5 @@
+project_id,project_name,project_budget,project_start_date,project_end_date,department_id
+204,CRM Integration,50000,2022-01-20,2023-01-20,5
+205,Brand Repositioning,70000,2022-04-01,2023-04-01,2
+208,Customer Support System,55000,2022-12-15,2022-12-15,3
+209,Market Research,30000,2022-03-25,2023-03-25,4
