@@ -84,6 +84,22 @@ CREATE TABLE IF NOT EXISTS project_budgeting.completed_projects (
 		ON UPDATE CASCADE	-- if department_id changes, update employees accordingly
 );
 
+-- Table: upcoming_projects (stores planned/future projects)
+CREATE TABLE IF NOT EXISTS project_budgeting.upcoming_projects (
+	project_id INT PRIMARY KEY NOT NULL,
+	project_name TEXT,
+	project_budget NUMERIC(12, 2),
+	project_start_date DATE,
+	project_end_date DATE,
+	department_id INT,		-- reference to responsible department
+	project_lead VARCHAR(155),
+	CONSTRAINT fk_upcoming_projects_department
+		FOREIGN KEY (department_id)
+		REFERENCES project_budgeting.departments (department_id)
+		ON DELETE SET NULL
+		ON UPDATE CASCADE
+);
+
 -- Table: project_assignments (link table between employees and projects)
 CREATE TABLE IF NOT EXISTS project_budgeting.project_assignments (
 	assignment_id INT PRIMARY KEY NOT NULL,
@@ -97,22 +113,6 @@ CREATE TABLE IF NOT EXISTS project_budgeting.project_assignments (
 	CONSTRAINT fk_project_assignments_project
 		FOREIGN KEY (project_id)
 		REFERENCES project_budgeting.projects (project_id)
-		ON DELETE SET NULL
-		ON UPDATE CASCADE
-);
-
--- Table: upcoming_projects (stores planned/future projects)
-CREATE TABLE IF NOT EXISTS project_budgeting.upcoming_projects (
-	project_id INT PRIMARY KEY NOT NULL,
-	project_name TEXT,
-	project_budget NUMERIC(12, 2),
-	project_start_date DATE,
-	project_end_date DATE,
-	department_id INT,		-- reference to responsible department
-	project_lead VARCHAR(155),
-	CONSTRAINT fk_upcoming_projects_department
-		FOREIGN KEY (department_id)
-		REFERENCES project_budgeting.departments (department_id)
 		ON DELETE SET NULL
 		ON UPDATE CASCADE
 );
