@@ -100,7 +100,7 @@ def main ():
     cursor.close()
     # Close database connection
     conn.close()
-    print("All data loaded successfully!")
+    print("All connections closed!")
 
 # Entry point check (runs only if script executed directly)
 if __name__ == "__main__":
