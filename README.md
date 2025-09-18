@@ -6,7 +6,7 @@ It covers the full cycle of work with data:
 - Database schema design in PostgreSQL
 - ETL processes in Python for data cleaning and loading
 - SQL queries for analytics and reporting
-- Future integration with **Microsoft Power BI** for interactive dashboards
+- Future integration with **Microsoft Power BI** for interactive dashboards and visualization
 
 The system ensures structured data storage and provides insights for budgeting, workforce planning, and project tracking.
 
@@ -14,12 +14,12 @@ The system ensures structured data storage and provides insights for budgeting, 
 
 ## 📂 Project Structure
 
-- data/ # Raw and cleaned CSV datasets
-- etl/ # Python ETL scripts for loading and transforming data
-- PostgreSQL/DDL/ # SQL scripts to create tables
-- PostgreSQL/DML/ # SQL scripts to query data
-- docs/ # Documentation, ERD diagram, and notes
-
+- data/ -> Raw and cleaned CSV datasets
+- etl/ -> Python ETL scripts for loading and transforming data
+- PostgreSQL/DDL/ -> SQL scripts to create tables
+- PostgreSQL/DML/ -> SQL scripts to query data
+- docs/ -> Documentation, ERD diagram, and notes
+ - reports/ -> Power BI .pbix reports and exported visuals
 ---
 
 ## ⚙️ How to Run
@@ -54,12 +54,16 @@ Use provided DML scripts, e.g.:
 
 ---
 
-📊 Database Schema (ERD)
+🗂️ Database Schema (ERD)
 
 The database is normalized and follows relational design principles
+ - ERD generated in DBeaver -> docs/erd_postgresql.png
 
-![ERD Diagram](docs/project_budgeting_ERD.png)
+![ERD Diagram](docs/erd_postgresql.png)
 
+ - ERD from Power BI Model View → docs/erd_powerbi_model.png
+
+ ![ERD Diagram](docs/erd_powerbi_model.png)
 ---
 
 📈 Example Query
@@ -73,13 +77,14 @@ INNER JOIN departments d ON e.department_id = d.department_id;
 
 ---
 
-📊📉 Example Dashboards (Power BI – Planned)
+📊📉 Power BI Dashboards
 In the next phase, Power BI dashboards will be created to visualize key insights, such as:
 
-- Department budget utilization
-- Employee distribution by project
-- Completed vs. upcoming projects
-- 📌 Screenshots of dashboards will be added here once developed.
+- 🔎 Employee selection via Slicer -> all visuals update dynamically.
+- 🖼️ Employee photos linked by employee_id from CSV.
+- 📊 Department-level aggregation (Budget, Salary Cost, Project Cost) with custom calculated columns in Power Query.
+-- 📐 ERD model view exported from Power BI for documentation.
+- 📌 Screenshots of dashboards will be added in /docs/ as development progresses.
 
 ---
 
@@ -89,7 +94,7 @@ In the next phase, Power BI dashboards will be created to visualize key insights
 - `Python` (psycopg2, dotenv, pandas, and os) – ETL and automation
 - `DBeaver` – SQL IDE and ERD generation
 - `Git/GitHub` – Version control
-- `Power BI` (planned) – Business Intelligence and visualization
+- `Power BI` Business Intelligence and visualization (Power Query, DAX, Slicers, Model View)
 
 ---
 
