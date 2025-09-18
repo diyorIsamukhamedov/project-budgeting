@@ -83,7 +83,7 @@ In the next phase, Power BI dashboards will be created to visualize key insights
 - 🔎 Employee selection via Slicer -> all visuals update dynamically.
 - 🖼️ Employee photos linked by employee_id from CSV.
 - 📊 Department-level aggregation (Budget, Salary Cost, Project Cost) with custom calculated columns in Power Query.
--- 📐 ERD model view exported from Power BI for documentation.
+- 📐 ERD model view exported from Power BI for documentation.
 - 📌 Screenshots of dashboards will be added in /docs/ as development progresses.
 
 ---
