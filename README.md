@@ -114,7 +114,7 @@ The Power BI dashboards provide interactive insights with the following features
 - `Python` (psycopg2, dotenv, pandas, and os) – ETL and automation
 - `DBeaver` – SQL IDE and ERD generation
 - `Git/GitHub` – Version control
-- `Power BI` Business Intelligence and visualization (Power Query, DAX, Slicers, Model View)
+- `Power BI` Business Intelligence and visualization (Power Query, Slicers, Model View)
 
 ---
 
