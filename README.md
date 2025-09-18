@@ -1,14 +1,14 @@
-# 📊 Project Budgeting Database
+# 📊 Project Budgeting System
 
 ## 📌 Overview
-This project implements a complete **database solution for managing departments, employees, and projects**.
-It covers the full cycle of work with data:
-- Database schema design in PostgreSQL
-- ETL processes in Python for data cleaning and loading
-- SQL queries for analytics and reporting
-- Future integration with **Microsoft Power BI** for interactive dashboards and visualization
+This project implements a complete end-to-end data solution for managing departments, employees, and projects.
+It covers the full lifecycle of data management:
+- Database schema design in `PostgreSQL`
+- ETL processes in `Python` for data cleaning and loading
+- `SQL` queries for analytics and reporting
+- Interactive dashboards in `Microsoft Power BI` for visualization
 
-The system ensures structured data storage and provides insights for budgeting, workforce planning, and project tracking.
+The system ensures structured data storage and provides insights for **budgeting, workforce planning, and project tracking**.
 
 ---
 
@@ -19,7 +19,7 @@ The system ensures structured data storage and provides insights for budgeting, 
 - PostgreSQL/DDL/ -> SQL scripts to create tables
 - PostgreSQL/DML/ -> SQL scripts to query data
 - docs/ -> Documentation, ERD diagram, and notes
- - reports/ -> Power BI .pbix reports and exported visuals
+- reports/ -> Power BI .pbix reports and exported visuals
 ---
 
 ## ⚙️ How to Run
@@ -72,20 +72,21 @@ Employees by Department:
 ```bash
 SELECT e.first_name, e.last_name, d.department_name
 FROM employees e
-INNER JOIN departments d ON e.department_id = d.department_id;
+INNER JOIN departments d
+    ON e.department_id = d.department_id;
 ```
 
 ---
 
 📊📉 Power BI Dashboards
-In the next phase, Power BI dashboards will be created to visualize key insights, such as:
+The Power BI dashboards provide interactive insights with the following features:
 
-- 🔎 Employee selection via Slicer -> all visuals update dynamically.
-- 🖼️ Employee photos linked by employee_id from CSV.
-- 📊 Department-level aggregation (Budget, Salary Cost, Project Cost) with custom calculated columns in Power Query.
-- 📐 ERD model view exported from Power BI for documentation.
-- 📌 Screenshots of dashboards will be added in /docs/ as development progresses.
-
+- 🔎 Employee selection via Slicer -> selecting an Employee ID dynamically updates all visuals.
+- 🖼️ Employee photos -> linked by employee_id from the dataset.
+- 💰 Financial KPIs -> Budget, Salary Cost, Project Cost, and calculated columns (e.g., 2-Year Budget = Budget * 0.5).
+- 📊 Visuals -> Donut charts - Capital and Project Budget distribution, Bar charts - Departmental project budgets, Table - Department goals, costs, salaries, and budgets.
+- 📌 Example Dashboard Screenshot:
+![Final Dashboard](reports/final_dashboard.png)
 ---
 
 🦾 Technologies Used
