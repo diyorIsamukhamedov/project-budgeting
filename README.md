@@ -130,4 +130,4 @@ The Power BI dashboards provide interactive insights with the following features
 ---
 
 👨‍💻 Author
-#### Developed by: `Diyor Isamukhamedov`
+#### Developed by: [Diyor Isamukhamedov](https://github.com/diyorIsamukhamedov/)
