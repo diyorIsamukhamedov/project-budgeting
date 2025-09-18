@@ -12,6 +12,25 @@ The system ensures structured data storage and provides insights for **budgeting
 
 ---
 
+📌 Business Problem
+
+Organizations need to manage workforce, understand financial risks, and monitor project health more effectively.
+
+This project addresses the following key questions:
+1. Identify departments and projects at risk detect which units are over budget or underperforming.
+2. Data organization - structure data from employees, salaries, department budgets, and projects for reporting.
+3. Power BI dashboard – provide visibility into employee performance, salary distribution, and departmental project management.
+- Department budgets are defined at 2-year intervals. The goal is to check whether one year of budget allocation can cover all expenses.
+---
+
+🛠️ Solution Approach
+- Capital = `[Budget] * 0.5 - ([Salary Cost] * 2 + [Project Cost])`
+- 2-Year Budget = `[Budget] * 0.5`
+
+The formulas ensure that half of the department’s budget (allocated for a 2-year period) is analyzed against actual salary and project costs to determine financial stability.
+
+---
+
 ## 📂 Project Structure
 
 - data/ -> Raw and cleaned CSV datasets
@@ -84,7 +103,7 @@ The Power BI dashboards provide interactive insights with the following features
 - 🔎 Employee selection via Slicer -> selecting an Employee ID dynamically updates all visuals.
 - 🖼️ Employee photos -> linked by employee_id from the dataset.
 - 💰 Financial KPIs -> Budget, Salary Cost, Project Cost, and calculated columns (e.g., 2-Year Budget = Budget * 0.5).
-- 📊 Visuals -> Donut charts - Capital and Project Budget distribution, Bar charts - Departmental project budgets, Table - Department goals, costs, salaries, and budgets.
+- 📊 Visuals -> Donut charts (Capital and Project Budget distribution), Bar charts - Departmental project budgets, Table (Department goals, costs, salaries, and budgets).
 - 📌 Example Dashboard Screenshot:
 ![Final Dashboard](reports/final_dashboard.png)
 ---
@@ -96,6 +115,17 @@ The Power BI dashboards provide interactive insights with the following features
 - `DBeaver` – SQL IDE and ERD generation
 - `Git/GitHub` – Version control
 - `Power BI` Business Intelligence and visualization (Power Query, DAX, Slicers, Model View)
+
+---
+
+📌 Key Outcomes
+
+| Problem | Solution | Outcome |
+|---|----------------------------------------------------------|------------|
+| Some departments and projects spend more than budget. | Use SQL and Power BI to compare real costs with budget. | ✅ Found departments and projects that are over budget. |
+| Budgets are for 2 years, but money is spent every year. | Formula: 2-Year Budget = Budget * 0.5 to check 1 year. | ✅ Checked if 1-year budget is enough for salaries and projects. |
+| Data is in many files: employees, salaries, projects, departments. | Create PostgreSQL database and ETL process to organize data. | ✅ Made one clean data model for all information. |
+| Managers cannot see clear reports about money and work. | Build Power BI dashboard with charts, slicers, and KPIs. | ✅ Managers can see simple reports and make better decisions.|
 
 ---
 
